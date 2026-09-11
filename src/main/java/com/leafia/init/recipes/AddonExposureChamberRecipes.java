@@ -22,7 +22,7 @@ public class AddonExposureChamberRecipes {
 		if(GeneralConfig.enableExpensiveMode)
 			recipes.add(new ExposureChamberRecipe(new ComparableStack(AddonItems.particle_dineutron), new ComparableStack(ModItems.item_expensive, 1, ItemEnums.EnumExpensiveType.DEGENERATE_MATTER), new ItemStack(ModItems.ingot_dineutronium)));
 		else
-			recipes.add(new ExposureChamberRecipe(new ComparableStack(AddonItems.particle_dineutron), new OreDictStack(SBD.ingot()), new ItemStack(ModItems.ingot_dineutronium)));
+			recipes.add(new ExposureChamberRecipe(new ComparableStack(ModItems.particle_sparkticle), new OreDictStack(SBD.ingot()), new ItemStack(ModItems.ingot_dineutronium)));
 	}
 	public static void removeRecipeFor(Item item) {
 		recipes.removeIf(recipe->recipe.output.getItem().equals(item));
